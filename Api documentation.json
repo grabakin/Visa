@@ -1,0 +1,6622 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "VisaBack | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5166"
+    }
+  ],
+  "paths": {
+    "/api/Client": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Client/{id}": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client4"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Client"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Client"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Document": {
+      "get": {
+        "tags": [
+          "Document"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Document"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Document/{id}": {
+      "get": {
+        "tags": [
+          "Document"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document4"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Document"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Document4"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Document"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Document/client/{clientId}": {
+      "get": {
+        "tags": [
+          "Document"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Document/order/{orderId}": {
+      "get": {
+        "tags": [
+          "Document"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document3"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Log": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Log"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Log/{id}": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Log2"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Log2"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Log/user/{userId}": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Log/event/{eventType}": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "eventType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Log/table/{tableName}": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "parameters": [
+          {
+            "name": "tableName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Log"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/{id}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order11"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order11"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Order/client/{clientId}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Service13"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Service13"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Service13"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Service"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/{id}": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Service16"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Service"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServicePriceHistory": {
+      "get": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServicePriceHistory/{id}": {
+      "get": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServicePriceHistory10"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServicePriceHistory10"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServicePriceHistory/service/{serviceId}": {
+      "get": {
+        "tags": [
+          "ServicePriceHistory"
+        ],
+        "parameters": [
+          {
+            "name": "serviceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServicePriceHistory9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User3"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User3"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User3"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User5"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User5"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Client": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents"
+          }
+        }
+      },
+      "Client10": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      },
+      "Client11": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document5"
+            }
+          }
+        }
+      },
+      "Client12": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client13": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document6"
+            }
+          }
+        }
+      },
+      "Client14": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client15": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/orders/items"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document7"
+            }
+          }
+        }
+      },
+      "Client16": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client17": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/orders/items"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document8"
+            }
+          }
+        }
+      },
+      "Client18": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client19": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document9"
+            }
+          }
+        }
+      },
+      "Client2": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      },
+      "Client20": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client21": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/service/properties/orders/items"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document10"
+            }
+          }
+        }
+      },
+      "Client22": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client3": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client4": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order3"
+            }
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents"
+          }
+        }
+      },
+      "Client5": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document2"
+            }
+          }
+        }
+      },
+      "Client6": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client7": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order5"
+            }
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Client8": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          }
+        }
+      },
+      "Client9": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order7"
+            }
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/client/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "ClientDto": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passportData": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Document": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client3"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order2"
+          }
+        }
+      },
+      "Document10": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client22"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order20"
+          }
+        }
+      },
+      "Document2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client6"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order4"
+          }
+        }
+      },
+      "Document3": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client7"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order6"
+          }
+        }
+      },
+      "Document4": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client9"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order8"
+          }
+        }
+      },
+      "Document5": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client12"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order10"
+          }
+        }
+      },
+      "Document6": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client14"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order12"
+          }
+        }
+      },
+      "Document7": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client16"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order14"
+          }
+        }
+      },
+      "Document8": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client18"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order16"
+          }
+        }
+      },
+      "Document9": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "docType": {
+            "type": "string",
+            "nullable": true
+          },
+          "docFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client20"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order18"
+          }
+        }
+      },
+      "Log": {
+        "required": [
+          "eventType",
+          "tableName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "tableName": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "changedData": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        }
+      },
+      "Log2": {
+        "required": [
+          "eventType",
+          "tableName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "tableName": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "changedData": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User2"
+          }
+        }
+      },
+      "Log3": {
+        "required": [
+          "eventType",
+          "tableName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "tableName": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "changedData": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User4"
+          }
+        }
+      },
+      "Log4": {
+        "required": [
+          "eventType",
+          "tableName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "tableName": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "changedData": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User6"
+          }
+        }
+      },
+      "Order": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client2"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order10": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service9"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order11": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client13"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order12": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service11"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order13": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client15"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order14": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service14"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order15": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client17"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order16": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service17"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order17": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client19"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order18": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service20"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order19": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client21"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order2": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order20": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service22"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order3": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client5"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Order4": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service3"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "Order5": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client8"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service5"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          }
+        }
+      },
+      "Order6": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Order7": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client10"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service7"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      },
+      "Order8": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/client"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/documents"
+          }
+        },
+        "nullable": true
+      },
+      "Order9": {
+        "required": [
+          "clientId",
+          "serviceId",
+          "orderDate",
+          "status",
+          "cost"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client11"
+          },
+          "service": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/documents/items/properties/order/properties/service"
+          },
+          "documents": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/documents/items/properties/order/properties/documents"
+          }
+        }
+      },
+      "Service": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/orders/items"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory"
+            }
+          }
+        }
+      },
+      "Service10": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/documents/items/properties/order/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service11": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory6"
+            }
+          }
+        }
+      },
+      "Service12": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/client/properties/documents/items/properties/order/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service13": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order13"
+            }
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service14": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders"
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory7"
+            }
+          }
+        }
+      },
+      "Service15": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service16": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order15"
+            }
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service17": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders"
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory8"
+            }
+          }
+        }
+      },
+      "Service18": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service19": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order17"
+            }
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service2": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service20": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          }
+        }
+      },
+      "Service21": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order19"
+            }
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service22": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory"
+            }
+          }
+        }
+      },
+      "Service3": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/orders/items"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory2"
+            }
+          }
+        }
+      },
+      "Service4": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/orders/items/properties/client/properties/documents/items/properties/order/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service5": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory3"
+            }
+          }
+        }
+      },
+      "Service6": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/items/properties/client/properties/orders/items/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service7": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/properties/client/properties/orders/items"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory4"
+            }
+          }
+        }
+      },
+      "Service8": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/service/properties/orders"
+          },
+          "priceHistory": {
+            "$ref": "#/components/schemas/#/properties/client/properties/orders/items/properties/service/properties/priceHistory"
+          }
+        }
+      },
+      "Service9": {
+        "required": [
+          "country",
+          "visaType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          },
+          "priceHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicePriceHistory5"
+            }
+          }
+        }
+      },
+      "ServiceDto": {
+        "required": [
+          "country",
+          "visaType",
+          "standardDuration",
+          "price"
+        ],
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "visaType": {
+            "type": "string"
+          },
+          "standardDuration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ServicePriceHistory": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service2"
+          }
+        }
+      },
+      "ServicePriceHistory10": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service21"
+          }
+        }
+      },
+      "ServicePriceHistory2": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service4"
+          }
+        }
+      },
+      "ServicePriceHistory3": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service6"
+          }
+        }
+      },
+      "ServicePriceHistory4": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service8"
+          }
+        }
+      },
+      "ServicePriceHistory5": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service10"
+          }
+        }
+      },
+      "ServicePriceHistory6": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service12"
+          }
+        }
+      },
+      "ServicePriceHistory7": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service15"
+          }
+        }
+      },
+      "ServicePriceHistory8": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service18"
+          }
+        }
+      },
+      "ServicePriceHistory9": {
+        "required": [
+          "serviceId",
+          "newPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service19"
+          }
+        }
+      },
+      "User": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/#/items"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "User2": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Log"
+            }
+          }
+        },
+        "nullable": true
+      },
+      "User3": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Log3"
+            }
+          }
+        }
+      },
+      "User4": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "$ref": "#/components/schemas/#/items/properties/logs"
+          }
+        },
+        "nullable": true
+      },
+      "User5": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Log4"
+            }
+          }
+        }
+      },
+      "User6": {
+        "required": [
+          "username",
+          "passwordHash"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formattedId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logs": {
+            "$ref": "#/components/schemas/#/properties/logs"
+          }
+        },
+        "nullable": true
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Client"
+    },
+    {
+      "name": "Document"
+    },
+    {
+      "name": "Log"
+    },
+    {
+      "name": "Order"
+    },
+    {
+      "name": "Service"
+    },
+    {
+      "name": "ServicePriceHistory"
+    },
+    {
+      "name": "User"
+    }
+  ]
+}

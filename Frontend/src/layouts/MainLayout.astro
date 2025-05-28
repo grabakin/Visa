@@ -1,0 +1,26 @@
+---
+import { Layout } from "antd";
+import Sidebar from "../components/layout/Sidebar";
+import Header from "../components/layout/Header";
+
+const { Content } = Layout;
+const { title = "Visa CRM" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Layout client:only style={{ minHeight: "100vh" }} hasSider>
+      <Sidebar client:only />
+      <Layout>
+        <Content style={{ padding: 24, minHeight: 280, width: "100%" }}>
+          <slot />
+        </Content>
+      </Layout>
+    </Layout>
+  </body>
+</html>

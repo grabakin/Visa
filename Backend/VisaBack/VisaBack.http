@@ -1,0 +1,7 @@
+@VisaBack_HostAddress = http://localhost:5166
+
+GET {{VisaBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+ 

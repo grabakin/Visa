@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "+mCC6GWV4MUnc52c/qS9OWEp6azZhxVFPV5tszVAmBY=",
+  "Source": "backend",
+  "BasePath": "_content/backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend\\wwwroot",
+      "Source": "backend",
+      "ContentRoot": "C:\\Users\\user\\Documents\\FRTND\\backendClear\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}
