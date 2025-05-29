@@ -1,7 +1,8 @@
 // API base URL and endpoints
 const API_URL = 'http://localhost:5166/api'; // Adjust to match your .NET backend URL
 const CLIENTS_ENDPOINT = `${API_URL}/Client`;
-import {Dayjs} from 'dayjs'
+import dayjs from 'dayjs';
+import type { Dayjs } from 'dayjs'
 
 export interface ClientModel {
     id: number;

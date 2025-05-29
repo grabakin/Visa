@@ -1,0 +1,14 @@
+Report generated at: 29-May-25 7:37:51 AM
+====================================
+Template would be: sample_template.docx
+====================================
+Field values that would be inserted:
+ClientEmail: 
+ClientName: Андрей
+ClientPhone: 
+OrderId: OR-1001
+ServiceCountry: США
+ServiceType: Дальняя
+stayDuration: выфхвыхф
+travelPurpose: Ахахвыф
+visitedCountries: п123

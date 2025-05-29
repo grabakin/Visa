@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Scalar.AspNetCore;
 using VisaBack.Data;
 using VisaBack.Services;
@@ -8,12 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<DocxProcessor>();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<VisaDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register IdGeneratorService for formatted IDs
+// Register services
 builder.Services.AddScoped<IdGeneratorService>();
+builder.Services.AddScoped<TemplateFieldGenerator>();
+builder.Services.AddScoped<DocumentGenerationService>();
+builder.Services.AddScoped<DocxProcessor>();
+builder.Services.AddScoped<PlaceholderExtractor>();
+builder.Services.AddScoped<DocxFiller>();
 
 // Add CORS services
 builder.Services.AddCors(options =>

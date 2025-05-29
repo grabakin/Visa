@@ -1,0 +1,25 @@
+VISA APPLICATION FORM
+
+Personal Information
+-------------------
+Full Name: ![ClientName]
+Passport Number: ![ClientPassport]
+Date of Birth: ![ClientBirthDate]
+Phone Number: ![ClientPhone]
+Email: ![ClientEmail]
+
+Visa Information
+---------------
+Country: ![ServiceCountry]
+Visa Type: ![ServiceType]
+Application Date: ![CurrentDate]
+Order Reference: ![OrderId]
+
+Additional Information
+---------------------
+Purpose of Visit: ![PurposeOfVisit]
+Duration of Stay: ![DurationOfStay]
+Accommodation Details: ![AccommodationDetails]
+
+Note: This is a placeholder template for demonstration purposes.
+In a real implementation, this would be a properly formatted DOCX file.

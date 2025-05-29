@@ -17,8 +17,11 @@ public class Order
     [Column("client_id")]
     public int ClientId { get; set; }
 
+    [Required]
+    [Column("worker_id")]
     public int WorkerId { get; set; }
-    public Worker Worker { get; set; }
+    
+    public virtual Worker Worker { get; set; }
     [Required]
     [Column("service_id")]
     public int ServiceId { get; set; }

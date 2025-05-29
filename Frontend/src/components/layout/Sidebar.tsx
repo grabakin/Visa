@@ -90,12 +90,7 @@ export default function Sidebar(): React.ReactNode {
     {
       key: "/reports",
       icon: <ChartBar size={20} weight="regular" />,
-      label: "Отчеты",
-    },
-    {
-      key: "/settings",
-      icon: <Gear size={20} weight="regular" />,
-      label: "Настройки",
+      label: "Автозаполнение",
     },
   ];
 

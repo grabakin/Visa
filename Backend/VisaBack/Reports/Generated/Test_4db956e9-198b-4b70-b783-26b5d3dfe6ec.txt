@@ -1,0 +1,13 @@
+DOCUMENT TEMPLATE WITH FILLED VALUES
+====================================
+Based on template: 70ba4369-0b14-4597-9b22-7db7b5c91a93.docx
+====================================
+
+CONTENT WITH REPLACED PLACEHOLDERS:
+
+Replaced ![ClientName] with: Петрова Анна Сергеевна
+Replaced ![ClientPhone] with: +7 (926) 987-65-43
+Replaced ![ClientEmail] with: petrova@gmail.com
+
+====================================
+In a real implementation, a properly formatted DOCX file would be generated.

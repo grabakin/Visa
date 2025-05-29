@@ -24,17 +24,20 @@ public class Document
 
     [Column("doc_file")]
     public byte[]? DocFile { get; set; }
+    
+    [Column("file_name")]
+    public string? FileName { get; set; }
 
     [Column("created_at")]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     [Column("updated_at")]
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
+    
     // Navigation properties
     [ForeignKey("ClientId")]
     public virtual Client? Client { get; set; }
-
+    
     [ForeignKey("OrderId")]
     public virtual Order? Order { get; set; }
 }

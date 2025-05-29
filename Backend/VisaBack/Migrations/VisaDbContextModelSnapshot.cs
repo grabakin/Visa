@@ -71,18 +71,35 @@ namespace VisaBack.Migrations
                         {
                             Id = 1,
                             CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FormattedId = "",
-                            FullName = "Арбуз",
-                            Phone = "89166424370",
+                            Description = "Постоянный клиент",
+                            Email = "ivanov@mail.ru",
+                            FormattedId = "CL001",
+                            FullName = "Иванов Иван Иванович",
+                            PassportData = "4500 123456",
+                            Phone = "+7 (916) 123-45-67",
                             UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
                             CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FormattedId = "",
-                            FullName = "Банан",
-                            Phone = "89156321",
+                            Description = "Новый клиент",
+                            Email = "petrova@gmail.com",
+                            FormattedId = "CL002",
+                            FullName = "Петрова Анна Сергеевна",
+                            PassportData = "4511 654321",
+                            Phone = "+7 (926) 987-65-43",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "sidorov@yandex.ru",
+                            FormattedId = "CL003",
+                            FullName = "Сидоров Алексей Петрович",
+                            PassportData = "4522 112233",
+                            Phone = "+7 (903) 555-55-55",
                             UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -109,6 +126,10 @@ namespace VisaBack.Migrations
                     b.Property<string>("DocType")
                         .HasColumnType("TEXT")
                         .HasColumnName("doc_type");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("file_name");
 
                     b.Property<string>("FormattedId")
                         .IsRequired()
@@ -222,7 +243,8 @@ namespace VisaBack.Migrations
                         .HasColumnName("updated_at");
 
                     b.Property<int>("WorkerId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("worker_id");
 
                     b.HasKey("Id");
 
@@ -233,6 +255,129 @@ namespace VisaBack.Migrations
                     b.HasIndex("WorkerId");
 
                     b.ToTable("orders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ClientId = 1,
+                            Cost = 12000m,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deadline = new DateTime(2025, 5, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Оформление туристической визы во Францию",
+                            FormattedId = "OR001",
+                            OrderDate = new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ServiceId = 1,
+                            Status = "В обработке",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            WorkerId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ClientId = 2,
+                            Cost = 15000m,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deadline = new DateTime(2025, 5, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Оформление шенгенской визы в Италию",
+                            FormattedId = "OR002",
+                            OrderDate = new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ServiceId = 3,
+                            Status = "Выполнен",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            WorkerId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ClientId = 3,
+                            Cost = 35000m,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deadline = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Оформление бизнес визы в США",
+                            FormattedId = "OR003",
+                            OrderDate = new DateTime(2025, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ServiceId = 2,
+                            Status = "Новый",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            WorkerId = 1
+                        });
+                });
+
+            modelBuilder.Entity("VisaBack.Models.Entities.ReportTemplate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("template_id");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("file_path");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("name");
+
+                    b.Property<string>("TemplateType")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("template_type");
+
+                    b.Property<string>("ThumbnailPath")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("thumbnail_path");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("report_templates");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Стандартная анкета для оформления визы",
+                            FilePath = "sample_template.docx",
+                            Name = "Визовая анкета",
+                            TemplateType = "visa_application",
+                            UpdatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Документ для оформления разрешения на работу",
+                            FilePath = "sample_template.docx",
+                            Name = "Разрешение на работу",
+                            TemplateType = "work_permit",
+                            UpdatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Отчет об истории поездок клиента",
+                            FilePath = "sample_template.docx",
+                            Name = "История поездок",
+                            TemplateType = "travel_history",
+                            UpdatedAt = new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("VisaBack.Models.Entities.Service", b =>
@@ -280,6 +425,56 @@ namespace VisaBack.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("services");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Country = "Франция",
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormattedId = "SV001",
+                            Price = 12000m,
+                            StandardDuration = 14,
+                            Status = "Активна",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            VisaType = "Туристическая"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Country = "США",
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormattedId = "SV002",
+                            Price = 35000m,
+                            StandardDuration = 30,
+                            Status = "Активна",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            VisaType = "Бизнес"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Country = "Италия",
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormattedId = "SV003",
+                            Price = 15000m,
+                            StandardDuration = 90,
+                            Status = "Активна",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            VisaType = "Шенген"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Country = "Япония",
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormattedId = "SV004",
+                            Price = 25000m,
+                            StandardDuration = 180,
+                            Status = "Активна",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            VisaType = "Рабочая"
+                        });
                 });
 
             modelBuilder.Entity("VisaBack.Models.Entities.ServicePriceHistory", b =>
@@ -347,43 +542,87 @@ namespace VisaBack.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("Worker", b =>
+            modelBuilder.Entity("VisaBack.Models.Entities.Worker", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("worker_id");
 
-                    b.Property<string>("Desctiption")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("email");
 
                     b.Property<string>("FormattedId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("formatted_id");
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("full_name");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("phone");
 
                     b.Property<string>("Position")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("position");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("status");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Workers");
+                    b.ToTable("workers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "",
+                            Email = "smirnov@visa.ru",
+                            FormattedId = "WK001",
+                            FullName = "Смирнов Дмитрий Александрович",
+                            Phone = "+7 (916) 111-22-33",
+                            Position = "Старший менеджер",
+                            Status = "Активен",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "",
+                            Email = "kuznetsova@visa.ru",
+                            FormattedId = "WK002",
+                            FullName = "Кузнецова Елена Викторовна",
+                            Phone = "+7 (926) 444-55-66",
+                            Position = "Менеджер",
+                            Status = "Активен",
+                            UpdatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("VisaBack.Models.Entities.Document", b =>
@@ -424,7 +663,7 @@ namespace VisaBack.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Worker", "Worker")
+                    b.HasOne("VisaBack.Models.Entities.Worker", "Worker")
                         .WithMany("Orders")
                         .HasForeignKey("WorkerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -472,7 +711,7 @@ namespace VisaBack.Migrations
                     b.Navigation("Logs");
                 });
 
-            modelBuilder.Entity("Worker", b =>
+            modelBuilder.Entity("VisaBack.Models.Entities.Worker", b =>
                 {
                     b.Navigation("Orders");
                 });
