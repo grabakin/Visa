@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VisaBack.Data;
 
@@ -10,9 +11,11 @@ using VisaBack.Data;
 namespace VisaBack.Migrations
 {
     [DbContext(typeof(VisaDbContext))]
-    partial class VisaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250529202653_UpdateSchemaWithDetailedClientFields")]
+    partial class UpdateSchemaWithDetailedClientFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");

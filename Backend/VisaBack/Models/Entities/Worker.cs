@@ -31,7 +31,7 @@ namespace VisaBack.Models.Entities
         [Column("status")]
         public string Status { get; set; } = "active";  // active, vacation, unavailable
         
-        [Column("description")]
+        [Column("description", TypeName = "text")]
         public string Description { get; set; } = string.Empty;
         
         [Column("created_at")]

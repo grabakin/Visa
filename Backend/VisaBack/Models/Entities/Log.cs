@@ -24,7 +24,7 @@ public class Log
     [Column("record_id")]
     public int? RecordId { get; set; }
 
-    [Column("changed_data")]
+    [Column("changed_data", TypeName = "text")]
     public string? ChangedData { get; set; }
 
     [Column("created_at")]

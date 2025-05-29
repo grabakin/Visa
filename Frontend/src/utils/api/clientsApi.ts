@@ -10,8 +10,32 @@ export interface ClientModel {
     fullName: string;
     phone?: string;
     email?: string;
+    
+    // Legacy field (maintained for backward compatibility)
     passportData?: string;
+    
+    // Identity document fields
+    identityDocType?: string;
+    identityDocSeries?: string;
+    identityDocNumber?: string;
+    identityDocIssuedByAuthority?: string;
+    identityDocIssueDate?: Dayjs;
+    identityDocAuthorityCode?: string;
+    
+    // Personal information
     birthDate?: Dayjs;
+    placeOfBirth?: string;
+    gender?: string;
+    citizenship?: string;
+    residentialAddress?: string;
+    
+    // Additional personal information
+    maritalStatus?: string;
+    childrenInfo?: string;
+    educationLevel?: string;
+    employmentInfo?: string;
+    incomeDetails?: string;
+    
     description?: string;
     createdAt: string;
     updatedAt: string;

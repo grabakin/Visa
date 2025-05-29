@@ -43,12 +43,37 @@ namespace VisaBack.Controllers
             // Create a new Client entity from the DTO
             var client = new Client
             {
+                // Basic info
                 FullName = clientDto.FullName,
                 Phone = clientDto.Phone,
                 Email = clientDto.Email,
-                PassportData = clientDto.PassportData,
                 BirthDate = clientDto.BirthDate,
                 Description = clientDto.Description,
+                
+                // Identity document fields
+                IdentityDocType = clientDto.IdentityDocType,
+                IdentityDocSeries = clientDto.IdentityDocSeries,
+                IdentityDocNumber = clientDto.IdentityDocNumber,
+                IdentityDocIssuedByAuthority = clientDto.IdentityDocIssuedByAuthority,
+                IdentityDocIssueDate = clientDto.IdentityDocIssueDate,
+                IdentityDocAuthorityCode = clientDto.IdentityDocAuthorityCode,
+                
+                // Personal information
+                PlaceOfBirth = clientDto.PlaceOfBirth,
+                Gender = clientDto.Gender,
+                Citizenship = clientDto.Citizenship,
+                ResidentialAddress = clientDto.ResidentialAddress,
+                
+                // Additional information
+                MaritalStatus = clientDto.MaritalStatus,
+                ChildrenInfo = clientDto.ChildrenInfo,
+                EducationLevel = clientDto.EducationLevel,
+                EmploymentInfo = clientDto.EmploymentInfo,
+                IncomeDetails = clientDto.IncomeDetails,
+                
+                // For backward compatibility
+                PassportData = clientDto.PassportData,
+                
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
@@ -72,12 +97,36 @@ namespace VisaBack.Controllers
                 return NotFound();
                 
             // Update client properties
+            // Basic info
             client.FullName = clientDto.FullName;
             client.Phone = clientDto.Phone;
             client.Email = clientDto.Email;
-            client.PassportData = clientDto.PassportData;
             client.BirthDate = clientDto.BirthDate;
             client.Description = clientDto.Description;
+            
+            // Identity document fields
+            client.IdentityDocType = clientDto.IdentityDocType;
+            client.IdentityDocSeries = clientDto.IdentityDocSeries;
+            client.IdentityDocNumber = clientDto.IdentityDocNumber;
+            client.IdentityDocIssuedByAuthority = clientDto.IdentityDocIssuedByAuthority;
+            client.IdentityDocIssueDate = clientDto.IdentityDocIssueDate;
+            client.IdentityDocAuthorityCode = clientDto.IdentityDocAuthorityCode;
+            
+            // Personal information
+            client.PlaceOfBirth = clientDto.PlaceOfBirth;
+            client.Gender = clientDto.Gender;
+            client.Citizenship = clientDto.Citizenship;
+            client.ResidentialAddress = clientDto.ResidentialAddress;
+            
+            // Additional information
+            client.MaritalStatus = clientDto.MaritalStatus;
+            client.ChildrenInfo = clientDto.ChildrenInfo;
+            client.EducationLevel = clientDto.EducationLevel;
+            client.EmploymentInfo = clientDto.EmploymentInfo;
+            client.IncomeDetails = clientDto.IncomeDetails;
+            
+            // For backward compatibility
+            client.PassportData = clientDto.PassportData;
             client.UpdatedAt = DateTime.UtcNow; // Update the timestamp
 
             await _context.SaveChangesAsync();

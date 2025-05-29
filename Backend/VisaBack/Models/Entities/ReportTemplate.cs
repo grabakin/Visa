@@ -15,7 +15,7 @@ namespace VisaBack.Models.Entities
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        [Column("description")]
+        [Column("description", TypeName = "text")]
         public string Description { get; set; } = string.Empty;
 
         [Required]
